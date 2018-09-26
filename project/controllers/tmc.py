@@ -35,30 +35,42 @@ def tmc():
     if request.method == 'POST':
         # variables para la obtencion del promedio, max y min
         iteration = 0
-        total = 0
-        data_max = 0
-        data_min = 10000        
+        total = 0        
         # listas de ploteo
         x_axis = []
-        #
+        # (21)
+        # Operaciones reajustables en moneda nacional 
         y_axis_21 = []
-        #
+        # (22)
+        # Operaciones reajustables en moneda nacional
+        # De un año o más. Superiores al equivalente de 2000 unidades de fomento
         y_axis_22 = []
-        #
+        # (24)
+        # Operaciones reajustables en moneda nacional 
+        # De un año o más. Superiores al equivalente de 2000 unidades de fomento
         y_axis_24 = []
+        # (25)
         # Operaciones no reajustables en moneda nacional de menos de 90 días
         # Superiores al equivalente de 5.000 unidades de fomento        
         y_axis_25 = []
-        #
+        # (26)
+        # Operaciones no reajustables en moneda nacional de menos de 90 días
+        # Inferiores o iguales al equivalente de 5.000 unidades de fomento
         y_axis_26 = []
+        # (33)
         # Operaciones no reajustables en moneda nacional 90 días o más
         # Inferiores o iguales al equivalente de 200 unidades de fomento
         y_axis_33 = []
-        #
+        # (34)
+        # Operaciones no reajustables en moneda nacional 90 días o más
+        # Superiores al equivalente de 5.000 unidades de fomento
         y_axis_34 = []
-        #
+        # (35)
+        # Operaciones no reajustables en moneda nacional 90 días o más
+        # Inferiores o iguales al equivalente de 5.000 unidades de fomento y superiores al equivalente de 200 unidades de fomento
         y_axis_35 = []
-        #
+        # (36)
+        # Operaciones expresadas en moneda extranjera
         y_axis_36 = []
         
         # request data api sbif, formateo como json

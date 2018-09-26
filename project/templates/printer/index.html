@@ -15,14 +15,17 @@
     <!-- indicadores -->
     <div>
         <h2>Resultados de la consulta:</h2>
+        <p id="data_res">
+            Valores diarios en CLP: {{ data }} 
+        </p>
+        <p id="promedio">
+            Promedio: ${{ promedio }} CLP
+        </p>    
         <p id="data_max">
                 Valor máximo: ${{ data_max }} CLP<br>
         </p>
         <p id="data_min">
             Valor mínimo: ${{ data_min }} CLP<br>
-        </p>
-        <p id="promedio">
-            Promedio: ${{ promedio }} CLP
-        </p>    
+        </p>        
     </div>    
 {% endblock %}
