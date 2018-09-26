@@ -1,0 +1,23 @@
+<!doctype html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Desafío Tecnología Área de Desarrollo</title>
+    </head>
+    <body>    
+        <a style="text-align:center" href="{{ url_for('start') }}">Home</a>
+        
+        <div class="page">
+            <h1>Web App consulta SBIF</h1>
+            {% for message in get_flashed_messages() %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+            {% macro render_error(field) %}
+                {% if field.errors %}
+                    {% for error in field.errors %}<span class='error'>{{ error }}</span>{% endfor %}
+                {% endif %}
+            {% endmacro %}
+            <br>
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "layout/layout.html" %}
+{% block body %}
+    <form action="{{ url_for('tmc_form_get') }}" method="post">
+        {{ form.csrf_token }}
+        <dl>
+            <dd>{{ form.ano_i.label }} {{ form.ano_i(size=20) }} {{ render_error(form.ano_i) }}</dd>
+            <dd>{{ form.mes_i.label }} {{ form.mes_i(size=20) }} {{ render_error(form.mes_i) }}</dd>            
+            <br>
+            <dd>{{ form.ano_f.label }} {{ form.ano_f(size=20) }} {{ render_error(form.ano_f) }}</dd>
+            <dd>{{ form.mes_f.label }} {{ form.mes_f(size=20) }} {{ render_error(form.mes_f) }}</dd>            
+            <dd><input type="submit" value="Consultar"/></dd>
+        </dl>
+    </form>  
+{% endblock %}

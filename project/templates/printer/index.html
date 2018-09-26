@@ -1,0 +1,28 @@
+{% extends "layout/layout.html" %}
+{% block body %}     
+    <h2>Consultar valor:</h2>
+    <ul>        
+        <li>
+            <a href="/uf">UF</a>
+        </li>
+        <li>
+            <a href="/dolar">Dolar</a>
+        </li>        
+        <li>
+            <a href="/tmc">TMC</a>
+        </li>
+    </ul>
+    <!-- indicadores -->
+    <div>
+        <h2>Resultados de la consulta:</h2>
+        <p id="data_max">
+                Valor máximo: ${{ data_max }} CLP<br>
+        </p>
+        <p id="data_min">
+            Valor mínimo: ${{ data_min }} CLP<br>
+        </p>
+        <p id="promedio">
+            Promedio: ${{ promedio }} CLP
+        </p>    
+    </div>    
+{% endblock %}
