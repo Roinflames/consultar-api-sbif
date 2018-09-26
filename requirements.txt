@@ -2,4 +2,3 @@ Flask
 Flask-WTF
 Jinja2
 Flask-DebugToolbar
-requests
